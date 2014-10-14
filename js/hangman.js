@@ -18,6 +18,7 @@ function StartHangman($scope, $document) {
 	}
 
 	$scope.startGame = function() {
+		$scope.secretWords = $scope.secretWords.toLowerCase();
 		for(i in $scope.secretWords) {
 			$scope.answer += $scope.secretWords[i] == ' ' ? ' ' : '-';
 		}
@@ -25,9 +26,10 @@ function StartHangman($scope, $document) {
 	}
 
 	$scope.guess = function(ch) {
+		ch = ch.toLowerCase();
 		$scope.charGuess = "";
 		if(ch.length != 1) {
-			alert("Please only enter one character");
+			alert("Please only enter one character at a time");
 			return ;
 		}
 
