@@ -38,11 +38,13 @@
 	<div ng-show="stage == 'won'">
 		<h1 ng-keypress="stage = 'initial'">You Win! :)</h1>
 		<h2>That's right, the secret words is {{ secretWords }}</h2>
+		<p>Press F5 to replay</p>
 	</div>
 
 	<div ng-show="stage == 'lost'">
 		<h1>You Lose! :(</h1>
 		<h2>The secret word is {{ secretWords }}</h2>
+		<p>Press F5 to replay</p>
 	</div>
 
 	<script src="js/hangman.js"></script>
