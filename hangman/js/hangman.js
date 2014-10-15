@@ -10,11 +10,11 @@ function StartHangman($scope, $document) {
 
 	var hasWon = function() {
 		var foundDash = $scope.answer.search(/-/);
-		return (foundDash == -1);
+		return (foundDash == -1) ? true : false;
 	}
 
 	var hasLost = function() {
-		return ($scope.failedGuess.length >= 8);
+		return ($scope.failedGuess.length >= 8) ? true : false;
 	}
 
 	$scope.startGame = function() {
